@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Care | Penyalur Asisten Rumah Tangga</title>
+  <meta name="description" content="Layanan penyalur asisten rumah tangga, baby sitter, perawat lansia, dan layanan rumah tangga terpercaya.">
+  <style>
+:root{
+  --green:#087b49;
+  --green-dark:#045a36;
+  --green-soft:#e9f8ef;
+  --pink:#ee4f8a;
+  --pink-dark:#d83a76;
+  --cream:#fffdf8;
+  --ink:#16231d;
+  --muted:#66746d;
+  --line:#dce8e1;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;color:var(--green);font-family:Montserrat,sans-serif}
+.brand-mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--pink);color:#fff;font-size:22px}
+.brand strong,.brand small{display:block;line-height:1}
+.brand strong{font-size:16px;letter-spacing:1px}.brand small{font-size:10px;letter-spacing:4px;margin-top:5px;color:var(--pink)}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:600}
+.nav-links a:hover{color:var(--pink)}
+.nav-cta{background:var(--green);color:#fff!important;padding:11px 17px;border-radius:999px}
+.menu-btn{display:none;border:0;background:none;font-size:28px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f8fff9 0%,#e8f8ee 52%,#d7f0df 100%);min-height:650px;padding:75px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;position:relative;z-index:2}
+.eyebrow{text-transform:none;color:var(--pink);font-weight:800;letter-spacing:.4px;margin-bottom:8px}
+.hero h1{font-family:Montserrat,sans-serif;font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-2.5px;margin:8px 0 18px}
+.hero h1 span{color:var(--pink)}
+.hero-sub{font-size:21px;font-weight:800;color:var(--green)}
+.hero-text{max-width:580px;color:#53635b;margin:15px 0 25px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:999px;font-weight:800;transition:.2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#fff;box-shadow:0 12px 25px rgba(8,123,73,.18)}
+.btn-light{background:#fff;border:1px solid var(--line);color:var(--green)}
+.btn-white{background:#fff;color:var(--green)}
+.mini-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:12px;color:#506058;font-weight:600}
+.hero-card{min-height:500px;background:linear-gradient(160deg,#fff 0%,#f9dce8 100%);border-radius:34px;position:relative;box-shadow:0 25px 70px rgba(5,75,42,.16);padding:25px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.hero-card:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(255,255,255,.75);top:-90px;right:-70px}
+.photo-placeholder{width:min(82%,340px);height:390px;border-radius:180px 180px 28px 28px;background:linear-gradient(160deg,#f7b8d0,#fff 45%,#75bf92);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:30px;box-shadow:inset 0 0 0 8px rgba(255,255,255,.35);position:relative}
+.photo-placeholder:before{content:"";position:absolute;top:45px;width:130px;height:130px;border-radius:50%;background:#f0c1a5;box-shadow:0 15px 0 -3px #34251f}
+.photo-icon{font-size:100px;transform:translateY(-65px);filter:drop-shadow(0 8px 8px rgba(0,0,0,.12))}
+.photo-placeholder p{font-weight:800;color:var(--green-dark);font-size:19px}.photo-placeholder small{color:#53635b}
+.guarantee{position:absolute;left:18px;bottom:34px;background:var(--pink);color:#fff;width:130px;height:130px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:20px;box-shadow:0 10px 25px rgba(238,79,138,.25);transform:rotate(-8deg)}
+.guarantee strong{font-size:29px;line-height:1}.guarantee span{font-size:10px;font-weight:800;line-height:1.1}
+.floating-note{position:absolute;right:18px;top:28px;background:#fff;border-radius:18px;padding:12px 15px;display:flex;gap:10px;box-shadow:0 10px 30px rgba(0,0,0,.1);font-size:12px}
+.note-icon{width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900}
+.floating-note b,.floating-note small{display:block}.floating-note small{color:var(--muted);font-size:10px}
+.hero-shape{position:absolute;border-radius:50%;background:rgba(255,255,255,.5)}.shape-1{width:420px;height:420px;left:-220px;bottom:-210px}.shape-2{width:220px;height:220px;right:-90px;top:90px}
+.service-strip{padding:85px 0;background:#fff}
+.section-heading{max-width:680px;margin-bottom:35px}.section-heading.center{text-align:center;margin-left:auto;margin-right:auto}
+.section-heading h2,.features h2,.cta h2{font-family:Montserrat,sans-serif;font-size:clamp(30px,4vw,44px);line-height:1.1;margin:6px 0 10px}
+.section-heading>p:last-child,.lead{color:var(--muted)}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service-card{padding:25px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#fff,#f9fffb);transition:.2s}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 35px rgba(8,123,73,.1)}
+.icon{font-size:35px;width:62px;height:62px;border-radius:18px;display:grid;place-items:center;background:var(--green-soft);margin-bottom:18px}
+.service-card h3{font-size:18px;margin-bottom:7px}.service-card p{font-size:13px;color:var(--muted)}
+.features{padding:90px 0;background:var(--green);color:#fff}
+.feature-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.features .eyebrow{color:#ffd0e1}.features .lead{color:#d7eee3}
+.feature-list{display:grid;gap:14px}
+.feature{display:grid;grid-template-columns:60px 1fr;gap:16px;padding:20px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.06)}
+.feature-number{font-family:Montserrat;font-weight:800;font-size:20px;color:#ff9fbe}.feature h3{margin-bottom:4px}.feature p{color:#cce5d9;font-size:13px}
+.process{padding:90px 0;background:#f6fbf7}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{text-align:center;padding:25px 15px}.step span{display:grid;place-items:center;margin:auto auto 14px;width:55px;height:55px;border-radius:50%;background:var(--pink);color:#fff;font-weight:900;font-size:19px}.step h3{font-size:17px}.step p{font-size:13px;color:var(--muted);margin-top:5px}
+.cta{padding:70px 0;background:linear-gradient(135deg,var(--pink),#f36f9f);color:#fff}
+.cta .eyebrow{color:#fff0f6}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{max-width:650px}.cta p:last-child{color:#ffe9f1}
+footer{background:#103a29;color:#d7e9df;padding:55px 0 0}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px}.footer-brand{color:#fff}.footer-brand .brand-mark{background:var(--pink)}footer h3{color:#fff;margin-bottom:9px}footer p{font-size:13px;color:#bcd2c7}footer a{color:#fff}.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.12);padding:17px;font-size:12px;color:#9db9aa}
+.floating-wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#18a965;color:#fff;display:grid;place-items:center;font-size:29px;box-shadow:0 12px 30px rgba(0,0,0,.2);z-index:60}
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 4%;flex-direction:column;align-items:stretch;box-shadow:0 12px 25px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{text-align:center}
+  .hero{padding:55px 0 70px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero-card{min-height:450px}
+  .service-grid{grid-template-columns:repeat(2,1fr)}.feature-layout{grid-template-columns:1fr;gap:35px}.steps{grid-template-columns:repeat(2,1fr)}
+  .cta-inner{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .nav{height:68px}.hero h1{font-size:43px}.hero-card{min-height:410px;padding:15px}.photo-placeholder{height:330px}
+  .service-grid,.steps,.footer-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.mini-trust{display:grid;gap:6px}
+  .guarantee{width:105px;height:105px}.guarantee strong{font-size:23px}.floating-note{right:10px}
+}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#beranda">
+        <span class="brand-mark">♡</span>
+        <span>
+          <strong>FAMILY</strong>
+          <small>CARE</small>
+        </span>
+      </a>
+      <button class="menu-btn" aria-label="Buka menu">☰</button>
+      <nav class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#proses">Cara Kerja</a>
+        <a href="#kontak" class="nav-cta">Hubungi Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="beranda">
+    <section class="hero">
+      <div class="hero-shape shape-1"></div>
+      <div class="hero-shape shape-2"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Melayani sepenuh hati ♡</p>
+          <h1>PENYALUR<br><span>ASISTEN</span><br>RUMAH TANGGA</h1>
+          <p class="hero-sub">Mudah <b>•</b> Cepat <b>•</b> Terpercaya</p>
+          <p class="hero-text">Temukan tenaga rumah tangga yang sesuai dengan kebutuhan keluarga Anda melalui proses yang praktis, aman, dan transparan.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/601118504433?text=Halo%20Family%20Care%2C%20saya%20ingin%20mencari%20asisten%20rumah%20tangga." target="_blank" rel="noopener">💬 Konsultasi WhatsApp</a>
+            <a class="btn btn-light" href="#layanan">Lihat Layanan</a>
+          </div>
+          <div class="mini-trust">
+            <span>✓ Proses seleksi</span>
+            <span>✓ Pendampingan</span>
+            <span>✓ Garansi layanan</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="photo-placeholder">
+            <div class="photo-icon">👩🏻‍🍳</div>
+            <p>Tenaga kerja terpilih</p>
+            <small>Siap bekerja di rumah Anda</small>
+          </div>
+          <div class="guarantee">
+            <strong>3 BULAN</strong>
+            <span>GARANSI LAYANAN</span>
+          </div>
+          <div class="floating-note">
+            <span class="note-icon">✓</span>
+            <span><b>Legal & Aman</b><small>Proses resmi dan terpercaya</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-strip" id="layanan">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Kami menyediakan</p>
+          <h2>Layanan untuk kebutuhan rumah Anda</h2>
+          <p>Pilih jenis tenaga kerja yang sesuai dengan kebutuhan keluarga.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon">🧹</div>
+            <h3>Asisten Rumah Tangga</h3>
+            <p>Berpengalaman, jujur, dan bertanggung jawab untuk membantu pekerjaan rumah sehari-hari.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">👶</div>
+            <h3>Baby Sitter</h3>
+            <p>Pendamping anak yang siap membantu menjaga dan menemani si kecil dengan penuh perhatian.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">🧓</div>
+            <h3>Perawat Lansia</h3>
+            <p>Pendamping untuk kebutuhan lansia dengan layanan yang sabar dan penuh kepedulian.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">✨</div>
+            <h3>Layanan Lainnya</h3>
+            <p>Konsultasikan kebutuhan tenaga rumah tangga lain agar kami dapat membantu mencarikan pilihan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="keunggulan">
+      <div class="container">
+        <div class="feature-layout">
+          <div>
+            <p class="eyebrow">Kenapa memilih kami?</p>
+            <h2>Aman, jelas, dan didampingi</h2>
+            <p class="lead">Kami membuat proses pencarian tenaga rumah tangga terasa lebih sederhana, dari konsultasi sampai pendampingan setelah penempatan.</p>
+          </div>
+          <div class="feature-list">
+            <div class="feature">
+              <span class="feature-number">01</span>
+              <div><h3>Seleksi ketat</h3><p>Kandidat melalui proses seleksi sesuai kebutuhan dan standar layanan.</p></div>
+            </div>
+            <div class="feature">
+              <span class="feature-number">02</span>
+              <div><h3>Legal & aman</h3><p>Proses dibuat transparan dengan informasi yang jelas untuk kedua pihak.</p></div>
+            </div>
+            <div class="feature">
+              <span class="feature-number">03</span>
+              <div><h3>Pendampingan</h3><p>Tim siap membantu komunikasi dan tindak lanjut setelah penempatan.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="proses">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Cara kerja</p>
+          <h2>Hanya 4 langkah sederhana</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><span>1</span><h3>Konsultasi</h3><p>Sampaikan kebutuhan Anda.</p></div>
+          <div class="step"><span>2</span><h3>Pilih kandidat</h3><p>Kami bantu berikan pilihan.</p></div>
+          <div class="step"><span>3</span><h3>Verifikasi</h3><p>Detail layanan dikonfirmasi.</p></div>
+          <div class="step"><span>4</span><h3>Penempatan</h3><p>Tenaga kerja siap bekerja.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="kontak">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">Siap dibantu?</p>
+          <h2>Butuh tenaga kerja untuk rumah Anda?</h2>
+          <p>Ceritakan kebutuhan Anda. Kami akan membantu mencari pilihan yang sesuai.</p>
+        </div>
+        <a class="btn btn-white" href="https://wa.me/601118504433?text=Halo%20Family%20Care%2C%20saya%20ingin%20konsultasi%20tentang%20tenaga%20kerja%20rumah%20tangga." target="_blank" rel="noopener">💬 Chat WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#beranda"><span class="brand-mark">♡</span><span><strong>FAMILY</strong><small>CARE</small></span></a>
+        <p>Penyalur tenaga rumah tangga dengan pelayanan ramah, cepat, dan terpercaya.</p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>WhatsApp: <a href="https://wa.me/601118504433" target="_blank" rel="noopener">011-1850 4433</a></p>
+        <p>Email: halo@rumahcare.id</p>
+      </div>
+      <div>
+        <h3>Jam Layanan</h3>
+        <p>Senin–Sabtu<br>08.00–17.00 WIB</p>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Family Care. Semua hak dilindungi.</div>
+  </footer>
+
+  <a class="floating-wa" href="https://wa.me/601118504433?text=Halo%20Family%20Care" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+  <script src="script.js"></script>
+</body>
+</html>
